@@ -73,11 +73,9 @@ class SudokuGame
     val.is_a?(Integer) &&
       val.between?(0, 9)
   end
-
   private
   attr_reader :board
 end
-
 
 game = SudokuGame.from_file("puzzles/sudoku1.txt")
 game.run
