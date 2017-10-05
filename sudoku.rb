@@ -10,25 +10,25 @@ class SudokuGame
     @board = board
   end
 
-  def get_pos
-    pos = nil
-    raise "This is the easiest error you're gonna get, chief.  It only gets harder going forward.  Remove me (or comment me out), re-run the code to make sure it works, and go on to the next level"
+  # def get_pos
+  #   pos = nil
+  #   raise "This is the easiest error you're gonna get, chief.  It only gets harder going forward.  Remove me (or comment me out), re-run the code to make sure it works, and go on to the next level"
 
-    until pos && valid_pos?(pos)
-      puts "Please enter a position on the board (e.g., '3,4')"
-      print "> "
-
-      begin
-        pos = parse_pos(gets.chomp)
-      rescue
-        puts "Invalid position entered (did you use a comma?)"
-        puts ""
-
-        pos = nil
-      end
-    end
-    pos
-  end
+  #   until pos && valid_pos?(pos)
+  #     puts "Please enter a position on the board (e.g., '3,4')"
+  #     print "> "
+  #
+  #     begin
+  #       pos = parse_pos(gets.chomp)
+  #     rescue
+  #       puts "Invalid position entered (did you use a comma?)"
+  #       puts ""
+  #
+  #       pos = nil
+  #     end
+  #   end
+  #   pos
+  # end
 
   def get_val
     val = nil
@@ -50,7 +50,7 @@ class SudokuGame
 
   def play_turn
     board.render
-    pos = get_pos
+    # pos = get_pos
     val = get_val
     board[pos] = val
   end
