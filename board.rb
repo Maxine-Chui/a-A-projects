@@ -77,6 +77,10 @@ class Board
     tiles
   end
 
+  def rows
+    @grid
+  end
+
   def squares
     (0..8).to_a.map { |i| square(i) }
   end
